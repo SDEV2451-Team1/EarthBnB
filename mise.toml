@@ -1,0 +1,6 @@
+[tools]
+node = "22.23.1"
+python = "3.13.7"
+
+[env]
+_.python.venv = { path = ".venv", create = true }
