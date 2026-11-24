@@ -38,7 +38,11 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # custom apps
+    "core",
+    "booking_app",
 ]
+
+AUTH_USER_MODEL = "core.CustomUser"
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
