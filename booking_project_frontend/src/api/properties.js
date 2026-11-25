@@ -39,7 +39,9 @@ export async function fetchProperties(filters = {}) {
     if (value) params.set(FILTER_MAP[filter], value);
   });
 
-  const response = await apiClient(`/properties/?${params}`);
+  const queryString = params.toString();
+  const url = queryString ? `/properties/?${queryString}` : "/properties/";
+  const response = await apiClient(url); 
 
   if (!response.ok) {
     throw new Error("Failed to fetch properties");
