@@ -2,7 +2,7 @@ from django.contrib.auth.models import AbstractUser
 from django.db import models
 
 
-class CustomUser(AbstractUser):
+class UserProfile(AbstractUser):
     ROLE_GUEST = "guest"
     ROLE_HOST = "host"
     ROLE_ADMIN = "admin"
